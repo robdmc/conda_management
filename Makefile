@@ -33,7 +33,7 @@ lock_viz_experiment: ## Create a lockfile for the environment
 
 .PHONY: checkout_viz_experiment_lock
 checkout_viz_experiment_lock: ## Check out the lockfile from the repo overwriting local changes
-	- git checkout viz_experiment_lock.yml
+	-git checkout viz_experiment_lock.yml
 
 .PHONY: install_viz_experiment
 install_viz_experiment: ## Create and install the environment
@@ -45,14 +45,11 @@ nuke_viz_experiment: ## Nuke everything about the env except the its env file
 	-conda env remove -n viz_experiment
 	-rm ./viz_experiment_lock.yml
 
-VALID_ARGS := option1 option2 option3
-
-
 
 VALID_ENVS := viz_debug viz_experiment viz_debug
 
-.PHONY: check-envs
-check-envs:
+.PHONY: validate-envs
+validate-envs:
 	@if [ -z "$(env)" ]; then \
 		echo "Please run with 'make <target> env=<env-name>'   where <env-name> is one of: $(VALID_ENVS)" >&2; \
 		exit 1; \
@@ -61,8 +58,12 @@ check-envs:
 	@echo $(VALID_ENVS) | grep -qw $(env) || (echo "Error: Invalid env '$(env)'. Choose from: $(VALID_ENVS)" >&2; exit 1)
 
 .PHONY: lock
-lock: check-envs ## Create lock file with make lock <env-name>
-	@echo "Executing env with valid argument: $(env)"
+lock: validate-envs ## Create lock file with make lock <env-name>
+	conda-lock lock -f ./$(env).yml  -p linux-64 -p osx-64 -p osx-arm64 -p linux-aarch64 --lockfile $(env)_lock.yml
+
+.PHONY: checkout
+checkout: validate-envs ## Check out the lockfile from repo overwriting local changes
+	-git checkout $(env)_lock.yml
 
 # target2: check-arg
 # 	@echo "Executing target2 with valid argument: $(arg)"
