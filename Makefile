@@ -5,20 +5,43 @@
 help:  ## Print the help documentation
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-.PHONY: viz_debug_lock
-viz_debug_lock: ## Create a lockfile for the viz_debug environment
-	conda-lock lock -f ./viz_debug.yml  -p linux-64 -p osx-64 -p osx-arm64 -p linux-aarch64 --lockfile viz_debug_lock.yml
-
-.PHONY: viz_debug_install
-viz_debug_install: ## Create a lockfile for the viz_debug environment
-	-conda env remove -n viz_debug
-	conda-lock install -n viz_debug ./viz_debug_lock.yml
-
-.PHONY: viz_debug_nuke
-viz_debug_nuke: ## Nuke everything about viz_debug except the env file
-	-conda env remove -n viz_debug
-	-rm ./viz_debug_lock.yml
-
 .PHONY: clean_locks
 clean_locks: ## Clean lock files
 	rm *_lock.yml
+
+.PHONY: lock_viz_debug
+lock_viz_debug: ## Create a lockfile for the environment
+	conda-lock lock -f ./viz_debug.yml  -p linux-64 -p osx-64 -p osx-arm64 -p linux-aarch64 --lockfile viz_debug_lock.yml
+
+.PHONY: checkout_viz_debug_lock
+checkout_viz_debug_lock: ## Check out the lockfile from the repo overwriting local changes
+	- git checkout viz_debug_lock.yml
+
+.PHONY: install_viz_debug
+install_viz_debug: ## Create and install the environment
+	-conda env remove -n viz_debug
+	conda-lock install -n viz_debug ./viz_debug_lock.yml
+
+.PHONY: nuke_viz_debug
+nuke_viz_debug: ## Nuke everything about the env except the its env file
+	-conda env remove -n viz_debug
+	-rm ./viz_debug_lock.yml
+
+.PHONY: lock_viz_experiment
+lock_viz_experiment: ## Create a lockfile for the environment
+	conda-lock lock -f ./viz_experiment.yml  -p linux-64 -p osx-64 -p osx-arm64 -p linux-aarch64 --lockfile viz_experiment_lock.yml
+
+.PHONY: checkout_viz_experiment_lock
+checkout_viz_experiment_lock: ## Check out the lockfile from the repo overwriting local changes
+	- git checkout viz_experiment_lock.yml
+
+.PHONY: install_viz_experiment
+install_viz_experiment: ## Create and install the environment
+	-conda env remove -n viz_experiment
+	conda-lock install -n viz_experiment ./viz_experiment_lock.yml
+
+.PHONY: nuke_viz_experiment
+nuke_viz_experiment: ## Nuke everything about the env except the its env file
+	-conda env remove -n viz_experiment
+	-rm ./viz_experiment_lock.yml
+
