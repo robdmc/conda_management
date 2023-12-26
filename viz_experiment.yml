@@ -21,6 +21,7 @@ dependencies:
         - cython
         - daiquiri
         - duckdb
+        - duckdb-engine
         - easier
         - flake8
         - fleming
@@ -66,7 +67,6 @@ dependencies:
         - pydantic
         - pytest
         - python-dateutil
-        # - python-graphviz
         - requests
         - scikit-learn
         - scipy
@@ -76,8 +76,8 @@ dependencies:
         - statsmodels
         - sympy
         - tqdm
-        - visidata
-        - xmltodict
-        - wrapt
         - twine
+        - visidata
         - wheel
+        - wrapt
+        - xmltodict
