@@ -65,6 +65,11 @@ lock: validate-envs ## Create lock file with make lock <env-name>
 checkout: validate-envs ## Check out the lockfile from repo overwriting local changes
 	-git checkout $(env)_lock.yml
 
+.PHONY: nuke
+nuke: validate-envs ## Nuke everything about the env except the its env file
+	-conda env remove -n viz_experiment
+	-rm ./viz_experiment_lock.yml
+
 # target2: check-arg
 # 	@echo "Executing target2 with valid argument: $(arg)"
 
