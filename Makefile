@@ -3,7 +3,7 @@
 
 .PHONY: help
 help:  ## Print the help documentation
-	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
+	@grep -E '^[a-zA-Z_-]+.*?:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
 .PHONY: clean_locks
 clean_locks: ## Clean lock files
@@ -44,4 +44,26 @@ install_viz_experiment: ## Create and install the environment
 nuke_viz_experiment: ## Nuke everything about the env except the its env file
 	-conda env remove -n viz_experiment
 	-rm ./viz_experiment_lock.yml
+
+VALID_ARGS := option1 option2 option3
+
+
+
+VALID_ENVS := viz_debug viz_experiment viz_debug
+
+.PHONY: check-envs
+check-envs:
+	@if [ -z "$(env)" ]; then \
+		echo "Please run with 'make <target> env=<env-name>'   where <env-name> is one of: $(VALID_ENVS)" >&2; \
+		exit 1; \
+	fi
+
+	@echo $(VALID_ENVS) | grep -qw $(env) || (echo "Error: Invalid env '$(env)'. Choose from: $(VALID_ENVS)" >&2; exit 1)
+
+.PHONY: lock
+lock: check-envs ## Create lock file with make lock <env-name>
+	@echo "Executing env with valid argument: $(env)"
+
+# target2: check-arg
+# 	@echo "Executing target2 with valid argument: $(arg)"
 
