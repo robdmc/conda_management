@@ -1,7 +1,7 @@
 #! /usr/bin/make 
 
 
-VALID_ENVS := viz_debug viz_experiment viz_debug
+VALID_ENVS := viz experiment debug
 
 .PHONY: help
 help:  ## Print the help documentation
