@@ -5,11 +5,11 @@
 # available, unless you explicitly update the lock file.
 #
 # Install this environment as "YOURENV" with:
-#     conda-lock install -n YOURENV --file viz_debug_lock.yml
+#     conda-lock install -n YOURENV --file debug_lock.yml
 # To update a single package to the latest version compatible with the version constraints in the source:
-#     conda-lock lock  --lockfile viz_debug_lock.yml --update PACKAGE
+#     conda-lock lock  --lockfile debug_lock.yml --update PACKAGE
 # To re-solve the entire environment, e.g. after changing a version constraint in the source file:
-#     conda-lock -f viz_debug.yml --lockfile viz_debug_lock.yml
+#     conda-lock -f debug.yml --lockfile debug_lock.yml
 version: 1
 metadata:
   content_hash:
@@ -26,7 +26,7 @@ metadata:
   - osx-arm64
   - linux-aarch64
   sources:
-  - viz_debug.yml
+  - debug.yml
 package:
 - name: _libgcc_mutex
   version: '0.1'
