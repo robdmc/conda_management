@@ -1,0 +1,16 @@
+# Run this to create: mamba env create --force -f <env-file.yml>
+# To update with any changes:  mamba env update -f <env-file.yml>
+name: viz_experiment
+channels:
+    - conda-forge
+dependencies:
+    - python=3.10
+    - datashader
+    - pip
+    - psycopg2
+
+
+    - pip:
+        - attrs
+        - click
+        - cookiecutter
