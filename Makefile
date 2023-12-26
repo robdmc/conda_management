@@ -14,6 +14,11 @@ viz_debug_install: ## Create a lockfile for the viz_debug environment
 	-conda env remove -n viz_debug
 	conda-lock install -n viz_debug ./viz_debug_lock.yml
 
+.PHONY: viz_debug_nuke
+viz_debug_nuke: ## Nuke everything about the viz_debug env
+	-conda env remove -n viz_debug
+	-rm ./viz_debug_lock.yml
+
 .PHONY: clean_locks
 clean_locks: ## Clean lock files
 	rm *_lock.yml
