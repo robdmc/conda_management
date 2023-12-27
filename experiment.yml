@@ -27,6 +27,7 @@ dependencies:
         - fleming
         - folium
         - fuzzypicker
+        - geopy
         - google-auth
         - google-auth-oauthlib
         - google-cloud-core
