@@ -36,11 +36,13 @@ dependencies:
         - gspread
         - holoviews[recommended]
         - hvplot
+        - ibis-framework==6.1.0
         - ibis-framework[duckdb]
         - ibis-framework[postgres]
         - ipympl
         - ipython
         - ipywidgets
+        - isort
         - jinja2
         - jinjasql
         - joblib
