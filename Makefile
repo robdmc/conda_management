@@ -1,7 +1,7 @@
 #! /usr/bin/make 
 
 
-VALID_ENVS := viz experiment debug ai
+VALID_ENVS := viz experiment debug ai_2024_01_25a ai_2024_01_31a
 
 .PHONY: help
 help:  ## Print the help documentation
