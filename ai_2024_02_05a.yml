@@ -16,6 +16,7 @@ dependencies:
         - attrs
         - beautifulsoup4
         - black
+        - chromadb
         - click
         - cookiecutter
         - cryptography
