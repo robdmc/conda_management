@@ -15,6 +15,7 @@ dependencies:
         - astropy
         - attrs
         - beautifulsoup4
+        - bertopic
         - black
         - chromadb
         - click

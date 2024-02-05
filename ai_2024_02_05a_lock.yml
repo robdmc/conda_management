@@ -13,18 +13,18 @@
 version: 1
 metadata:
   content_hash:
-    linux-64: 3e5e85b3e9309beb7567db52dca771273ced232a1b464e81f17861e92a41ca13
-    osx-64: 76ee7474403a7c97044bf474028fd88c1860ee580e444fa3ea636a9b98490e30
-    osx-arm64: 1c3f4ccd84cb78a17c2c6db52c4fab115011a103bd1b73ee141b292d7c12e8da
-    linux-aarch64: 307bec314a1499135527014782297eed5720573ed1ca513ab9a84b9c85b2b1ea
+    linux-64: 6be33339e690dcf9eccedf15b47fce763a32af32c4737263410c902a42365eab
+    osx-64: 8ac7f47299bf9950e0c8decacf09693146be1078284d28f47aa142d422125ea8
+    osx-arm64: aab017649f9c3f13f7e993be3f9ff70a9b956796bc2234d8530c641672b8af5e
+    linux-aarch64: c32a7e40f1ff4bac6051c7e245df2798fdba7c574f628ae86a10bc7cc7a9502e
   channels:
   - url: conda-forge
     used_env_vars: []
   platforms:
   - linux-64
+  - linux-aarch64
   - osx-64
   - osx-arm64
-  - linux-aarch64
   sources:
   - ai_2024_02_05a.yml
 package:
@@ -11930,6 +11930,78 @@ package:
     sha256: b80878c9f40111313e55da8ba20bdba06d8fa3969fc68304167741bbf9e082ed
   category: main
   optional: false
+- name: bertopic
+  version: 0.16.0
+  manager: pip
+  platform: linux-64
+  dependencies:
+    numpy: '>=1.20.0'
+    hdbscan: '>=0.8.29'
+    umap-learn: '>=0.5.0'
+    pandas: '>=1.1.5'
+    scikit-learn: '>=0.22.2.post1'
+    tqdm: '>=4.41.1'
+    sentence-transformers: '>=0.4.1'
+    plotly: '>=4.7.0'
+  url: https://files.pythonhosted.org/packages/43/da/182ef741d2510965a82a21332fa5706d1e9095c7a673436344442efceea9/bertopic-0.16.0-py2.py3-none-any.whl
+  hash:
+    sha256: 886b22c361473ef8901d5898ab34c7454e67f99143668d26ec2690cf7b3dc73c
+  category: main
+  optional: false
+- name: bertopic
+  version: 0.16.0
+  manager: pip
+  platform: linux-aarch64
+  dependencies:
+    numpy: '>=1.20.0'
+    hdbscan: '>=0.8.29'
+    umap-learn: '>=0.5.0'
+    pandas: '>=1.1.5'
+    scikit-learn: '>=0.22.2.post1'
+    tqdm: '>=4.41.1'
+    sentence-transformers: '>=0.4.1'
+    plotly: '>=4.7.0'
+  url: https://files.pythonhosted.org/packages/43/da/182ef741d2510965a82a21332fa5706d1e9095c7a673436344442efceea9/bertopic-0.16.0-py2.py3-none-any.whl
+  hash:
+    sha256: 886b22c361473ef8901d5898ab34c7454e67f99143668d26ec2690cf7b3dc73c
+  category: main
+  optional: false
+- name: bertopic
+  version: 0.16.0
+  manager: pip
+  platform: osx-64
+  dependencies:
+    numpy: '>=1.20.0'
+    hdbscan: '>=0.8.29'
+    umap-learn: '>=0.5.0'
+    pandas: '>=1.1.5'
+    scikit-learn: '>=0.22.2.post1'
+    tqdm: '>=4.41.1'
+    sentence-transformers: '>=0.4.1'
+    plotly: '>=4.7.0'
+  url: https://files.pythonhosted.org/packages/43/da/182ef741d2510965a82a21332fa5706d1e9095c7a673436344442efceea9/bertopic-0.16.0-py2.py3-none-any.whl
+  hash:
+    sha256: 886b22c361473ef8901d5898ab34c7454e67f99143668d26ec2690cf7b3dc73c
+  category: main
+  optional: false
+- name: bertopic
+  version: 0.16.0
+  manager: pip
+  platform: osx-arm64
+  dependencies:
+    numpy: '>=1.20.0'
+    hdbscan: '>=0.8.29'
+    umap-learn: '>=0.5.0'
+    pandas: '>=1.1.5'
+    scikit-learn: '>=0.22.2.post1'
+    tqdm: '>=4.41.1'
+    sentence-transformers: '>=0.4.1'
+    plotly: '>=4.7.0'
+  url: https://files.pythonhosted.org/packages/43/da/182ef741d2510965a82a21332fa5706d1e9095c7a673436344442efceea9/bertopic-0.16.0-py2.py3-none-any.whl
+  hash:
+    sha256: 886b22c361473ef8901d5898ab34c7454e67f99143668d26ec2690cf7b3dc73c
+  category: main
+  optional: false
 - name: bidict
   version: 0.22.1
   manager: pip
@@ -14992,6 +15064,66 @@ package:
   url: https://files.pythonhosted.org/packages/95/04/ff642e65ad6b90db43e668d70ffb6736436c7ce41fcc549f4e9472234127/h11-0.14.0-py3-none-any.whl
   hash:
     sha256: e3fe4ac4b851c468cc8363d500db52c2ead036020723024a109d37346efaa761
+  category: main
+  optional: false
+- name: hdbscan
+  version: 0.8.31
+  manager: pip
+  platform: linux-64
+  dependencies:
+    cython: '>=0.27'
+    numpy: '>=1.20'
+    scipy: '>=1.0'
+    scikit-learn: '>=0.20'
+    joblib: '>=1.0'
+  url: https://files.pythonhosted.org/packages/4a/11/92c8c98005cc4c8f61d4299f496376791a6e498c3f1b0812c0e6eb68a6c5/hdbscan-0.8.31.tar.gz
+  hash:
+    sha256: 3bb47a5844330d425d0fc796c908c50447b13ffd9210a5467958fe47959a9a87
+  category: main
+  optional: false
+- name: hdbscan
+  version: 0.8.31
+  manager: pip
+  platform: linux-aarch64
+  dependencies:
+    cython: '>=0.27'
+    numpy: '>=1.20'
+    scipy: '>=1.0'
+    scikit-learn: '>=0.20'
+    joblib: '>=1.0'
+  url: https://files.pythonhosted.org/packages/4a/11/92c8c98005cc4c8f61d4299f496376791a6e498c3f1b0812c0e6eb68a6c5/hdbscan-0.8.31.tar.gz
+  hash:
+    sha256: 3bb47a5844330d425d0fc796c908c50447b13ffd9210a5467958fe47959a9a87
+  category: main
+  optional: false
+- name: hdbscan
+  version: 0.8.31
+  manager: pip
+  platform: osx-64
+  dependencies:
+    cython: '>=0.27'
+    numpy: '>=1.20'
+    scipy: '>=1.0'
+    scikit-learn: '>=0.20'
+    joblib: '>=1.0'
+  url: https://files.pythonhosted.org/packages/4a/11/92c8c98005cc4c8f61d4299f496376791a6e498c3f1b0812c0e6eb68a6c5/hdbscan-0.8.31.tar.gz
+  hash:
+    sha256: 3bb47a5844330d425d0fc796c908c50447b13ffd9210a5467958fe47959a9a87
+  category: main
+  optional: false
+- name: hdbscan
+  version: 0.8.31
+  manager: pip
+  platform: osx-arm64
+  dependencies:
+    cython: '>=0.27'
+    numpy: '>=1.20'
+    scipy: '>=1.0'
+    scikit-learn: '>=0.20'
+    joblib: '>=1.0'
+  url: https://files.pythonhosted.org/packages/4a/11/92c8c98005cc4c8f61d4299f496376791a6e498c3f1b0812c0e6eb68a6c5/hdbscan-0.8.31.tar.gz
+  hash:
+    sha256: 3bb47a5844330d425d0fc796c908c50447b13ffd9210a5467958fe47959a9a87
   category: main
   optional: false
 - name: holoviews
@@ -20056,6 +20188,54 @@ package:
     sha256: 0614df2a2f37e1a662acbd8e2b25b92ccf8632929bc6d43467e17fe89c75e068
   category: main
   optional: false
+- name: plotly
+  version: 5.18.0
+  manager: pip
+  platform: linux-64
+  dependencies:
+    tenacity: '>=6.2.0'
+    packaging: '*'
+  url: https://files.pythonhosted.org/packages/a8/07/72953cf70e3bd3a24cbc3e743e6f8539abe6e3e6d83c3c0c83426eaffd39/plotly-5.18.0-py3-none-any.whl
+  hash:
+    sha256: 23aa8ea2f4fb364a20d34ad38235524bd9d691bf5299e800bca608c31e8db8de
+  category: main
+  optional: false
+- name: plotly
+  version: 5.18.0
+  manager: pip
+  platform: linux-aarch64
+  dependencies:
+    tenacity: '>=6.2.0'
+    packaging: '*'
+  url: https://files.pythonhosted.org/packages/a8/07/72953cf70e3bd3a24cbc3e743e6f8539abe6e3e6d83c3c0c83426eaffd39/plotly-5.18.0-py3-none-any.whl
+  hash:
+    sha256: 23aa8ea2f4fb364a20d34ad38235524bd9d691bf5299e800bca608c31e8db8de
+  category: main
+  optional: false
+- name: plotly
+  version: 5.18.0
+  manager: pip
+  platform: osx-64
+  dependencies:
+    tenacity: '>=6.2.0'
+    packaging: '*'
+  url: https://files.pythonhosted.org/packages/a8/07/72953cf70e3bd3a24cbc3e743e6f8539abe6e3e6d83c3c0c83426eaffd39/plotly-5.18.0-py3-none-any.whl
+  hash:
+    sha256: 23aa8ea2f4fb364a20d34ad38235524bd9d691bf5299e800bca608c31e8db8de
+  category: main
+  optional: false
+- name: plotly
+  version: 5.18.0
+  manager: pip
+  platform: osx-arm64
+  dependencies:
+    tenacity: '>=6.2.0'
+    packaging: '*'
+  url: https://files.pythonhosted.org/packages/a8/07/72953cf70e3bd3a24cbc3e743e6f8539abe6e3e6d83c3c0c83426eaffd39/plotly-5.18.0-py3-none-any.whl
+  hash:
+    sha256: 23aa8ea2f4fb364a20d34ad38235524bd9d691bf5299e800bca608c31e8db8de
+  category: main
+  optional: false
 - name: pluggy
   version: 1.4.0
   manager: pip
@@ -21074,6 +21254,66 @@ package:
   url: https://files.pythonhosted.org/packages/d4/d7/f1b7db88d8e4417c5d47adad627a93547f44bdc9028372dbd2313f34a855/pyflakes-3.2.0-py2.py3-none-any.whl
   hash:
     sha256: 84b5be138a2dfbb40689ca07e2152deb896a65c3a3e24c251c5c62489568074a
+  category: main
+  optional: false
+- name: pynndescent
+  version: 0.5.11
+  manager: pip
+  platform: linux-64
+  dependencies:
+    scikit-learn: '>=0.18'
+    scipy: '>=1.0'
+    numba: '>=0.51.2'
+    llvmlite: '>=0.30'
+    joblib: '>=0.11'
+  url: https://files.pythonhosted.org/packages/4e/82/0b9851a2fd4da9b57d7931446f5ebab92a98f1f35d3dc0dae5f9ed50a462/pynndescent-0.5.11-py3-none-any.whl
+  hash:
+    sha256: a628f4fc8a67757c8fa15613449ac513fd056258a55b4084e47c06640ec90a8d
+  category: main
+  optional: false
+- name: pynndescent
+  version: 0.5.11
+  manager: pip
+  platform: linux-aarch64
+  dependencies:
+    scikit-learn: '>=0.18'
+    scipy: '>=1.0'
+    numba: '>=0.51.2'
+    llvmlite: '>=0.30'
+    joblib: '>=0.11'
+  url: https://files.pythonhosted.org/packages/4e/82/0b9851a2fd4da9b57d7931446f5ebab92a98f1f35d3dc0dae5f9ed50a462/pynndescent-0.5.11-py3-none-any.whl
+  hash:
+    sha256: a628f4fc8a67757c8fa15613449ac513fd056258a55b4084e47c06640ec90a8d
+  category: main
+  optional: false
+- name: pynndescent
+  version: 0.5.11
+  manager: pip
+  platform: osx-64
+  dependencies:
+    scikit-learn: '>=0.18'
+    scipy: '>=1.0'
+    numba: '>=0.51.2'
+    llvmlite: '>=0.30'
+    joblib: '>=0.11'
+  url: https://files.pythonhosted.org/packages/4e/82/0b9851a2fd4da9b57d7931446f5ebab92a98f1f35d3dc0dae5f9ed50a462/pynndescent-0.5.11-py3-none-any.whl
+  hash:
+    sha256: a628f4fc8a67757c8fa15613449ac513fd056258a55b4084e47c06640ec90a8d
+  category: main
+  optional: false
+- name: pynndescent
+  version: 0.5.11
+  manager: pip
+  platform: osx-arm64
+  dependencies:
+    scikit-learn: '>=0.18'
+    scipy: '>=1.0'
+    numba: '>=0.51.2'
+    llvmlite: '>=0.30'
+    joblib: '>=0.11'
+  url: https://files.pythonhosted.org/packages/4e/82/0b9851a2fd4da9b57d7931446f5ebab92a98f1f35d3dc0dae5f9ed50a462/pynndescent-0.5.11-py3-none-any.whl
+  hash:
+    sha256: a628f4fc8a67757c8fa15613449ac513fd056258a55b4084e47c06640ec90a8d
   category: main
   optional: false
 - name: pyparsing
@@ -22118,6 +22358,46 @@ package:
   url: https://files.pythonhosted.org/packages/a9/78/e4df1e080ed790acf3a704edf521006dd96b9841bd2e2a462c0d255e0565/Send2Trash-1.8.2-py3-none-any.whl
   hash:
     sha256: a384719d99c07ce1eefd6905d2decb6f8b7ed054025bb0e618919f945de4f679
+  category: main
+  optional: false
+- name: sentencepiece
+  version: 0.1.99
+  manager: pip
+  platform: linux-64
+  dependencies: {}
+  url: https://files.pythonhosted.org/packages/7f/e5/323dc813b3e1339305f888d035e2f3725084fc4dcf051995b366dd26cc90/sentencepiece-0.1.99-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+  hash:
+    sha256: 019e7535108e309dae2b253a75834fc3128240aa87c00eb80732078cdc182588
+  category: main
+  optional: false
+- name: sentencepiece
+  version: 0.1.99
+  manager: pip
+  platform: linux-aarch64
+  dependencies: {}
+  url: https://files.pythonhosted.org/packages/02/e5/bd29c9ce36884e051625d11eb3a11a26bdab9342e218363cc2fb1e9da69f/sentencepiece-0.1.99-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl
+  hash:
+    sha256: baed1a26464998f9710d20e52607c29ffd4293e7c71c6a1f83f51ad0911ec12c
+  category: main
+  optional: false
+- name: sentencepiece
+  version: 0.1.99
+  manager: pip
+  platform: osx-64
+  dependencies: {}
+  url: https://files.pythonhosted.org/packages/c8/27/4ca09f801842d4e47bf6650f38949f82afa5bfad4ba8aa653ece9e7dcafd/sentencepiece-0.1.99-cp310-cp310-macosx_10_9_x86_64.whl
+  hash:
+    sha256: 77d7fafb2c4e4659cbdf303929503f37a26eabc4ff31d3a79bf1c5a1b338caa7
+  category: main
+  optional: false
+- name: sentencepiece
+  version: 0.1.99
+  manager: pip
+  platform: osx-arm64
+  dependencies: {}
+  url: https://files.pythonhosted.org/packages/cd/96/1e6b6e76671e5a540f41f8cdbc9bee15cce30c76e9b78948a0c581a142aa/sentencepiece-0.1.99-cp310-cp310-macosx_11_0_arm64.whl
+  hash:
+    sha256: be9cf5b9e404c245aeb3d3723c737ba7a8f5d4ba262ef233a431fa6c45f732a0
   category: main
   optional: false
 - name: setproctitle
@@ -23238,6 +23518,70 @@ package:
   url: https://files.pythonhosted.org/packages/d1/1c/5aeb94aa980da111e4fd0c0fbe5ad95ed5bf9bd957f8e2a6178b85ff4da8/uc_micro_py-1.0.2-py3-none-any.whl
   hash:
     sha256: 8c9110c309db9d9e87302e2f4ad2c3152770930d88ab385cd544e7a7e75f3de0
+  category: main
+  optional: false
+- name: umap-learn
+  version: 0.5.5
+  manager: pip
+  platform: linux-64
+  dependencies:
+    numpy: '>=1.17'
+    scipy: '>=1.3.1'
+    scikit-learn: '>=0.22'
+    numba: '>=0.51.2'
+    pynndescent: '>=0.5'
+    tqdm: '*'
+  url: https://files.pythonhosted.org/packages/4f/3c/a81281db93878bcd80da672a9b520674f930e0a18d73a2e4b23e8b176cb6/umap-learn-0.5.5.tar.gz
+  hash:
+    sha256: c54d607364413eade968b73ba07c8b3ea14412817f53cd07b6f720ac957293c4
+  category: main
+  optional: false
+- name: umap-learn
+  version: 0.5.5
+  manager: pip
+  platform: linux-aarch64
+  dependencies:
+    numpy: '>=1.17'
+    scipy: '>=1.3.1'
+    scikit-learn: '>=0.22'
+    numba: '>=0.51.2'
+    pynndescent: '>=0.5'
+    tqdm: '*'
+  url: https://files.pythonhosted.org/packages/4f/3c/a81281db93878bcd80da672a9b520674f930e0a18d73a2e4b23e8b176cb6/umap-learn-0.5.5.tar.gz
+  hash:
+    sha256: c54d607364413eade968b73ba07c8b3ea14412817f53cd07b6f720ac957293c4
+  category: main
+  optional: false
+- name: umap-learn
+  version: 0.5.5
+  manager: pip
+  platform: osx-64
+  dependencies:
+    numpy: '>=1.17'
+    scipy: '>=1.3.1'
+    scikit-learn: '>=0.22'
+    numba: '>=0.51.2'
+    pynndescent: '>=0.5'
+    tqdm: '*'
+  url: https://files.pythonhosted.org/packages/4f/3c/a81281db93878bcd80da672a9b520674f930e0a18d73a2e4b23e8b176cb6/umap-learn-0.5.5.tar.gz
+  hash:
+    sha256: c54d607364413eade968b73ba07c8b3ea14412817f53cd07b6f720ac957293c4
+  category: main
+  optional: false
+- name: umap-learn
+  version: 0.5.5
+  manager: pip
+  platform: osx-arm64
+  dependencies:
+    numpy: '>=1.17'
+    scipy: '>=1.3.1'
+    scikit-learn: '>=0.22'
+    numba: '>=0.51.2'
+    pynndescent: '>=0.5'
+    tqdm: '*'
+  url: https://files.pythonhosted.org/packages/4f/3c/a81281db93878bcd80da672a9b520674f930e0a18d73a2e4b23e8b176cb6/umap-learn-0.5.5.tar.gz
+  hash:
+    sha256: c54d607364413eade968b73ba07c8b3ea14412817f53cd07b6f720ac957293c4
   category: main
   optional: false
 - name: uri-template
