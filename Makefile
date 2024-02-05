@@ -1,7 +1,8 @@
 #! /usr/bin/make 
 
 
-VALID_ENVS := viz experiment debug ai_2024_01_25a ai_2024_01_31a
+SHELL := /bin/bash
+VALID_ENVS := $(shell ls *.yml | grep -v lock)
 
 .PHONY: help
 help:  ## Print the help documentation
