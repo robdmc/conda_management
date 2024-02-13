@@ -1,1 +1,3 @@
 pip install isort
+pandoc
+selenium (and firefox driver for doing doctor feedback)
