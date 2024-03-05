@@ -1,1 +1,3 @@
-selenium (and firefox driver for doing doctor feedback)
+pip install selenium
+pip install ollama
+conda install -c conda-forge firefox geckodriver --solver=classic
