@@ -17,3 +17,4 @@ All the actions you can take are enumerated in lockfile
     * If I decide I like those packages, then I'll (at a later date) have to add each of those files to the corresponding environment
       file and recreate the lock file.
 * I anticipate having the `viz` and `experiment` lock-files checked into a github repo 
+
