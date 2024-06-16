@@ -1,3 +1,6 @@
+pip install jaxlib
+pip install jax
+pip install jax-metal
 
 # Manual installs below (not a great fit for conda-lock)
 pip install selenium
