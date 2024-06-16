@@ -1,6 +1,5 @@
-pip install jaxlib
-pip install jax
-pip install jax-metal
+
+# MANUAL INSTALLS BELOW DO NOT WORK WELL WITH THE CONDA-LOCK PROCESS
 
 # Manual installs selenium stuff (not a great fit for conda-lock)
 pip install selenium
@@ -9,4 +8,9 @@ conda install -c conda-forge firefox geckodriver --solver=classic
 
 
 # Manual installs for jax gpu
+pip install jax-metal
+pip install flax
+pip install equinox
+pip install optax
+pip install diffrax
 
