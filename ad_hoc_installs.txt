@@ -2,7 +2,11 @@ pip install jaxlib
 pip install jax
 pip install jax-metal
 
-# Manual installs below (not a great fit for conda-lock)
+# Manual installs selenium stuff (not a great fit for conda-lock)
 pip install selenium
 pip install ollama
 conda install -c conda-forge firefox geckodriver --solver=classic
+
+
+# Manual installs for jax gpu
+
