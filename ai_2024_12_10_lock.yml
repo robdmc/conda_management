@@ -13,18 +13,18 @@
 version: 1
 metadata:
   content_hash:
-    linux-64: e6873dfad21b4e79ef7f7e3c86ad7f6d180a336226685357b9732b57151e17b7
-    osx-64: b535d9659dac707eb6a52c57bdad273a6dc6b22173ee13437ccd9802ea3e1521
-    osx-arm64: cfe4b2666f8d900918d254a83ea7b0f6e7b2961cfa231805cb8087c8ee02b246
-    linux-aarch64: 0dd9577199cc11b0405e8e0e1e41558a08cec353b04ed95215ec68f8dfad8d28
+    linux-64: 0d79911b749fc8d3273cf05c7328ac8f255e283646097f22f1f87d25b3fa3b5b
+    osx-64: 39d0735ee15bbc686a9c78d2a67ceca5933507d117eac2dc4d5e005eea04ddef
+    osx-arm64: 27790ecacf12e79ef0baff90e6d5505f2ef4f84d53323c4d489d77ddb15d9c8f
+    linux-aarch64: f9faf8198c363c66f747b47aade4f746684301b9a25b9784d5cffd407df274c7
   channels:
   - url: conda-forge
     used_env_vars: []
   platforms:
   - linux-64
+  - linux-aarch64
   - osx-64
   - osx-arm64
-  - linux-aarch64
   sources:
   - ai_2024_12_10.yml
 package:
@@ -11225,90 +11225,6 @@ package:
     sha256: fdbdc15711762c42e5f9fff25cb71962153d4859d740e9092e56b7df9dc6e041
   category: main
   optional: false
-- name: econml
-  version: 0.12.0
-  manager: pip
-  platform: linux-64
-  dependencies:
-    numpy: '*'
-    scipy: '>1.4.0'
-    scikit-learn: '>0.22.0'
-    sparse: '*'
-    joblib: '>=0.13.0'
-    numba: '!=0.42.1'
-    statsmodels: '>=0.10'
-    pandas: '*'
-    shap: '>=0.38.1,<0.40.0'
-    dowhy: '*'
-    lightgbm: '*'
-  url: https://files.pythonhosted.org/packages/0b/c4/41777de2f0de2781c9ef1375c0c1d8c15d3ba5f7ba850d4f5f0f4e8bec52/econml-0.12.0.tar.gz
-  hash:
-    sha256: 4a8196d6c785e9e0e42b2fa35dd058eb37166c75dcdb90ada953feea6fbb854b
-  category: main
-  optional: false
-- name: econml
-  version: 0.12.0
-  manager: pip
-  platform: linux-aarch64
-  dependencies:
-    numpy: '*'
-    scipy: '>1.4.0'
-    scikit-learn: '>0.22.0'
-    sparse: '*'
-    joblib: '>=0.13.0'
-    numba: '!=0.42.1'
-    statsmodels: '>=0.10'
-    pandas: '*'
-    shap: '>=0.38.1,<0.40.0'
-    dowhy: '*'
-    lightgbm: '*'
-  url: https://files.pythonhosted.org/packages/0b/c4/41777de2f0de2781c9ef1375c0c1d8c15d3ba5f7ba850d4f5f0f4e8bec52/econml-0.12.0.tar.gz
-  hash:
-    sha256: 4a8196d6c785e9e0e42b2fa35dd058eb37166c75dcdb90ada953feea6fbb854b
-  category: main
-  optional: false
-- name: econml
-  version: 0.12.0
-  manager: pip
-  platform: osx-64
-  dependencies:
-    numpy: '*'
-    scipy: '>1.4.0'
-    scikit-learn: '>0.22.0'
-    sparse: '*'
-    joblib: '>=0.13.0'
-    numba: '!=0.42.1'
-    statsmodels: '>=0.10'
-    pandas: '*'
-    shap: '>=0.38.1,<0.40.0'
-    dowhy: '*'
-    lightgbm: '*'
-  url: https://files.pythonhosted.org/packages/0b/c4/41777de2f0de2781c9ef1375c0c1d8c15d3ba5f7ba850d4f5f0f4e8bec52/econml-0.12.0.tar.gz
-  hash:
-    sha256: 4a8196d6c785e9e0e42b2fa35dd058eb37166c75dcdb90ada953feea6fbb854b
-  category: main
-  optional: false
-- name: econml
-  version: 0.12.0
-  manager: pip
-  platform: osx-arm64
-  dependencies:
-    numpy: '*'
-    scipy: '>1.4.0'
-    scikit-learn: '>0.22.0'
-    sparse: '*'
-    joblib: '>=0.13.0'
-    numba: '!=0.42.1'
-    statsmodels: '>=0.10'
-    pandas: '*'
-    shap: '>=0.38.1,<0.40.0'
-    dowhy: '*'
-    lightgbm: '*'
-  url: https://files.pythonhosted.org/packages/0b/c4/41777de2f0de2781c9ef1375c0c1d8c15d3ba5f7ba850d4f5f0f4e8bec52/econml-0.12.0.tar.gz
-  hash:
-    sha256: 4a8196d6c785e9e0e42b2fa35dd058eb37166c75dcdb90ada953feea6fbb854b
-  category: main
-  optional: false
 - name: executing
   version: 2.1.0
   manager: pip
@@ -19963,78 +19879,6 @@ package:
     sha256: 317218c9d8b17a010ab2d2f0851e8ef584077a38b1ba2b7c55c9e44e79a61e73
   category: main
   optional: false
-- name: shap
-  version: 0.39.0
-  manager: pip
-  platform: linux-64
-  dependencies:
-    numpy: '*'
-    scipy: '*'
-    scikit-learn: '*'
-    pandas: '*'
-    tqdm: '>4.25.0'
-    slicer: 0.0.7
-    numba: '*'
-    cloudpickle: '*'
-  url: https://files.pythonhosted.org/packages/b9/f4/c5b95cddae15be80f8e58b25edceca105aa83c0b8c86a1edad24a6af80d3/shap-0.39.0.tar.gz
-  hash:
-    sha256: 0196a6c12cc98f8b48ce9c5968550902432b80290da6fa7be8655441a1c6251a
-  category: main
-  optional: false
-- name: shap
-  version: 0.39.0
-  manager: pip
-  platform: linux-aarch64
-  dependencies:
-    numpy: '*'
-    scipy: '*'
-    scikit-learn: '*'
-    pandas: '*'
-    tqdm: '>4.25.0'
-    slicer: 0.0.7
-    numba: '*'
-    cloudpickle: '*'
-  url: https://files.pythonhosted.org/packages/b9/f4/c5b95cddae15be80f8e58b25edceca105aa83c0b8c86a1edad24a6af80d3/shap-0.39.0.tar.gz
-  hash:
-    sha256: 0196a6c12cc98f8b48ce9c5968550902432b80290da6fa7be8655441a1c6251a
-  category: main
-  optional: false
-- name: shap
-  version: 0.39.0
-  manager: pip
-  platform: osx-64
-  dependencies:
-    numpy: '*'
-    scipy: '*'
-    scikit-learn: '*'
-    pandas: '*'
-    tqdm: '>4.25.0'
-    slicer: 0.0.7
-    numba: '*'
-    cloudpickle: '*'
-  url: https://files.pythonhosted.org/packages/b9/f4/c5b95cddae15be80f8e58b25edceca105aa83c0b8c86a1edad24a6af80d3/shap-0.39.0.tar.gz
-  hash:
-    sha256: 0196a6c12cc98f8b48ce9c5968550902432b80290da6fa7be8655441a1c6251a
-  category: main
-  optional: false
-- name: shap
-  version: 0.39.0
-  manager: pip
-  platform: osx-arm64
-  dependencies:
-    numpy: '*'
-    scipy: '*'
-    scikit-learn: '*'
-    pandas: '*'
-    tqdm: '>4.25.0'
-    slicer: 0.0.7
-    numba: '*'
-    cloudpickle: '*'
-  url: https://files.pythonhosted.org/packages/b9/f4/c5b95cddae15be80f8e58b25edceca105aa83c0b8c86a1edad24a6af80d3/shap-0.39.0.tar.gz
-  hash:
-    sha256: 0196a6c12cc98f8b48ce9c5968550902432b80290da6fa7be8655441a1c6251a
-  category: main
-  optional: false
 - name: simpy
   version: 4.1.1
   manager: pip
@@ -20073,46 +19917,6 @@ package:
   url: https://files.pythonhosted.org/packages/48/72/920ed1224c94a8a5a69e6c1275ac7fe4eb911ba8feffddf469f1629d47f3/simpy-4.1.1-py3-none-any.whl
   hash:
     sha256: 7c5ae380240fd2238671160e4830956f8055830a8317edf5c05e495b3823cd88
-  category: main
-  optional: false
-- name: slicer
-  version: 0.0.7
-  manager: pip
-  platform: linux-64
-  dependencies: {}
-  url: https://files.pythonhosted.org/packages/78/c2/b3f55dfdb8af9812fdb9baf70cacf3b9e82e505b2bd4324d588888b81202/slicer-0.0.7-py3-none-any.whl
-  hash:
-    sha256: 0b94faa5251c0f23782c03f7b7eedda91d80144059645f452c4bc80fab875976
-  category: main
-  optional: false
-- name: slicer
-  version: 0.0.7
-  manager: pip
-  platform: linux-aarch64
-  dependencies: {}
-  url: https://files.pythonhosted.org/packages/78/c2/b3f55dfdb8af9812fdb9baf70cacf3b9e82e505b2bd4324d588888b81202/slicer-0.0.7-py3-none-any.whl
-  hash:
-    sha256: 0b94faa5251c0f23782c03f7b7eedda91d80144059645f452c4bc80fab875976
-  category: main
-  optional: false
-- name: slicer
-  version: 0.0.7
-  manager: pip
-  platform: osx-64
-  dependencies: {}
-  url: https://files.pythonhosted.org/packages/78/c2/b3f55dfdb8af9812fdb9baf70cacf3b9e82e505b2bd4324d588888b81202/slicer-0.0.7-py3-none-any.whl
-  hash:
-    sha256: 0b94faa5251c0f23782c03f7b7eedda91d80144059645f452c4bc80fab875976
-  category: main
-  optional: false
-- name: slicer
-  version: 0.0.7
-  manager: pip
-  platform: osx-arm64
-  dependencies: {}
-  url: https://files.pythonhosted.org/packages/78/c2/b3f55dfdb8af9812fdb9baf70cacf3b9e82e505b2bd4324d588888b81202/slicer-0.0.7-py3-none-any.whl
-  hash:
-    sha256: 0b94faa5251c0f23782c03f7b7eedda91d80144059645f452c4bc80fab875976
   category: main
   optional: false
 - name: smmap
@@ -20233,58 +20037,6 @@ package:
   url: https://files.pythonhosted.org/packages/d1/c2/fe97d779f3ef3b15f05c94a2f1e3d21732574ed441687474db9d342a7315/soupsieve-2.6-py3-none-any.whl
   hash:
     sha256: e72c4ff06e4fb6e4b5a9f0f55fe6e81514581fca1515028625d0f299c602ccc9
-  category: main
-  optional: false
-- name: sparse
-  version: 0.15.4
-  manager: pip
-  platform: linux-64
-  dependencies:
-    numpy: '>=1.17'
-    scipy: '>=0.19'
-    numba: '>=0.49'
-  url: https://files.pythonhosted.org/packages/1a/f2/8d5bc8cc6b822feac1cd671dac6fb0249a5202ad15ee9549d1a61d4141b5/sparse-0.15.4-py2.py3-none-any.whl
-  hash:
-    sha256: 76ec76fee2aee82a84eb97155dd530a9644e3b1fdea2406bc4b454698b36d938
-  category: main
-  optional: false
-- name: sparse
-  version: 0.15.4
-  manager: pip
-  platform: linux-aarch64
-  dependencies:
-    numpy: '>=1.17'
-    scipy: '>=0.19'
-    numba: '>=0.49'
-  url: https://files.pythonhosted.org/packages/1a/f2/8d5bc8cc6b822feac1cd671dac6fb0249a5202ad15ee9549d1a61d4141b5/sparse-0.15.4-py2.py3-none-any.whl
-  hash:
-    sha256: 76ec76fee2aee82a84eb97155dd530a9644e3b1fdea2406bc4b454698b36d938
-  category: main
-  optional: false
-- name: sparse
-  version: 0.15.4
-  manager: pip
-  platform: osx-64
-  dependencies:
-    numpy: '>=1.17'
-    scipy: '>=0.19'
-    numba: '>=0.49'
-  url: https://files.pythonhosted.org/packages/1a/f2/8d5bc8cc6b822feac1cd671dac6fb0249a5202ad15ee9549d1a61d4141b5/sparse-0.15.4-py2.py3-none-any.whl
-  hash:
-    sha256: 76ec76fee2aee82a84eb97155dd530a9644e3b1fdea2406bc4b454698b36d938
-  category: main
-  optional: false
-- name: sparse
-  version: 0.15.4
-  manager: pip
-  platform: osx-arm64
-  dependencies:
-    numpy: '>=1.17'
-    scipy: '>=0.19'
-    numba: '>=0.49'
-  url: https://files.pythonhosted.org/packages/1a/f2/8d5bc8cc6b822feac1cd671dac6fb0249a5202ad15ee9549d1a61d4141b5/sparse-0.15.4-py2.py3-none-any.whl
-  hash:
-    sha256: 76ec76fee2aee82a84eb97155dd530a9644e3b1fdea2406bc4b454698b36d938
   category: main
   optional: false
 - name: sqlalchemy

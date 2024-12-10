@@ -33,7 +33,7 @@ dependencies:
         - duckdb
         - duckdb-engine
         - easier
-        - econml
+        #- econml
         - flake8
         - fleming
         - folium
