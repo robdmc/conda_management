@@ -14,3 +14,6 @@ pip install equinox
 pip install optax
 pip install diffrax
 
+# Cool extension for vim in jupyter lab
+pip install jupyterlab-vim
+

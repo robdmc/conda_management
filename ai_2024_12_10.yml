@@ -1,10 +1,10 @@
 # Run this to create: mamba env create --force -f <env-file.yml>
 # To update with any changes:  mamba env update -f <env-file.yml>
-name: ai_2024_06_16
+name: ai_2024_07_28
 channels:
     - conda-forge
 dependencies:
-    - python=3.10
+    - python=3.12
     # - bertopic
     - datashader
     - lightgbm
@@ -12,6 +12,7 @@ dependencies:
     - psycopg2
     - pygraphviz
     - pytorch
+    - py-xgboost
     # - sentence-transformers
     # - setfit
     # - stable-baselines3
@@ -22,7 +23,6 @@ dependencies:
         - beautifulsoup4
         - black
         - cem
-        - chromadb
         - click
         - cookiecutter
         - cryptography
@@ -48,7 +48,7 @@ dependencies:
         - hdbscan >= 0.8.33
         - holoviews[recommended]
         - hvplot
-        - ibis-framework==8.0.0
+        - ibis-framework
         - ibis-framework[duckdb]
         - ibis-framework[postgres]
         - ipympl
@@ -60,7 +60,7 @@ dependencies:
         - joblib
         - jupyterlab
         - jupyterlab-code-formatter
-        - langchain
+        # - langchain
         - lifelines
         - maidenhead
         - mlflow
@@ -99,5 +99,4 @@ dependencies:
         - visidata
         - wheel
         - wrapt
-        - xgboost
         - xmltodict
